@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cyber-Intel Briefing – Sentinel Echo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="starfield"></canvas>
+  <audio id="bgAudio" src="audio/ambient_loop.mp3" autoplay loop hidden></audio>
+
+  <div class="hud-container">
+    <div class="main-panel">
+      <h1 class="glitch" data-text="Operación Sentinel Echo">Operación Sentinel Echo</h1>
+      <h2 class="glitch" data-text="Cyber-Intel Briefing">Cyber-Intel Briefing</h2>
+
+      <!-- Audio narración de la operación -->
+      <div class="glow-box audio-box">
+        <button id="playAudio">▶️ Reproducir narración</button>
+      </div>
+
+      <!-- Audio narración del despliegue -->
+      <div class="glow-box audio-box">
+        <button id="playDeploy">▶️ Reproducir despliegue</button>
+      </div>
+
+      <div class="glow-box">
+        <p><strong>Inicio:</strong> 13 de junio | 02:17 Zulu</p>
+        <p><strong>Status:</strong> Fase uno completada – Infraestructura hostil parcialmente neutralizada.</p>
+        <p><strong>Resumen:</strong> Tras anomalías en nodos europeos, se identificó y contuvo Cerber X23-Delta. Forenses y OSINT coordinaron contención, infiltración de metadatos y desvío narrativo.</p>
+      </div>
+
+      <div class="glow-box">
+        <h2>Objetivos Tácticos</h2>
+        <ul>
+          <li>Mapeo C2 & telemetría pasiva</li>
+          <li>Volcado dinámico de payloads</li>
+          <li>Exfiltración sin activación de heurísticas</li>
+          <li>Manipulación contextual OSINT</li>
+        </ul>
+      </div>
+
+      <div class="glow-box">
+        <h2>Resultado</h2>
+        <p>Éxito con exposición <span class="highlight">mínima</span>. 40 % de nodos neutralizados. En curso: monitorización para Fase 2 en <span id="countdown"></span>.</p>
+      </div>
+
+      <div class="glow-box" style="text-align:center;">
+        <p><em>“Silencio. Precisión. Propósito.”</em></p>
+        <p><strong>Fin de informe.</strong></p>
+      </div>
+    </div>
+
+    <div class="side-panel">
+      <div class="panel osint">
+        <h3>Feed OSINT</h3>
+        <ul id="osint-feed"></ul>
+      </div>
+      <div class="panel console">
+        <h3>Consola Forense</h3>
+        <pre id="forensic-log"></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audios de narración -->
+  <audio id="narration" src="audio/informe_operativo.mp3" preload="auto"></audio>
+  <audio id="deploymentAudio" src="audio/despliege.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
